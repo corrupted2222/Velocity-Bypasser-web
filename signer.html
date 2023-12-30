@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Astra</title>
+</head>
+
+<body>
+    <h1 class="title">Astra | Signer</h1>
+    <h1 class="limit">3GB File Upload Limit</h1>
+
+    <div class="card">
+        <div class="card-content"></div>
+    </div>
+
+    <form method="post" action="https://api.casp.dev/upload.php" enctype="multipart/form-data" id="uploadForm"
+        name="uploadForm">
+
+            <label for="p12" class="p12-label"><span>.P12 File</span></label>
+            <input type="file" id="p12" name="p12" accept=".p12" class="custom-file-input" required>
+
+            <label for="mobileprovision" class="mobile-label"><span>.MobileProvision File</span></label>
+            <input type="file" id="mobileprovision" name="mobileprovision" accept=".mobileprovision"
+                class="custom-file-input" required>
+
+            <label for="ipa" class="ipa-label"><span>.IPA File</span></label>
+            <input type="file" id="ipa" name="ipa" accept=".ipa" required="" class="custom-file-input">
+
+            <label for="pass" class="p12passlabel">Password of the certificate</label>
+            <input type="text" id="pass" name="pass" placeholder="Password" class="p12passinput" value=""
+                required>
+
+            <input type="submit" class="button" value="Sign">
+
+        <center><label class="powerd">Powered by EonHub API.</label></center>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fileInputs = document.querySelectorAll('.custom-file-input');
+
+            fileInputs.forEach(function (input) {
+                input.addEventListener('change', function () {
+                    const maxFileNameLength = 15;
+                    const fileName = this.files[0].name;
+                    let displayedFileName = fileName.length <= maxFileNameLength ?
+                        fileName :
+                        fileName.substring(0, maxFileNameLength) + '...';
+
+                    const label = this.previousElementSibling; // Get the previous element, which is the label
+                    label.textContent = displayedFileName;
+                });
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .title {
+            margin-top: 2px;
+            margin-left: 4px;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .limit {
+            color: white;
+            font-family: sans-serif;
+            position: absolute;
+            margin-left: 490px;
+            position: relative;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .powerd {
+            color: white;
+            font-family: sans-serif;
+            position: relative;
+            top: 220px;
+            right: 170px;
+        }
+
+        /* Customized file input */
+        .custom-file-input {
+            display: none;
+        }
+
+        .custom-file-label {
+            background-color: white;
+            color: black;
+            padding: 10px 100px;
+            display: inline-block;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: 'sans-serif';
+            margin-bottom: 70px;
+        }
+
+        .ipa-label {
+          background-color: black;
+            color: white;
+            padding: 10px 160px;
+            display: inline-block;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: 'sans-serif';
+            position: fixed;
+            margin-top: -399px;
+            margin-left: 410px;
+        }
+
+        .p12-label {
+          background-color: black;
+            color: white;
+            padding: 10px 160px;
+            display: inline-block;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: 'sans-serif';
+            position: fixed;
+            margin-top: -300px;
+            margin-left: 410px;
+        }
+
+        .mobile-label {
+          background-color: black;
+            color: white;
+            padding: 10px 119px;
+            display: inline-block;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-family: 'sans-serif';
+            position: fixed;
+            margin-top: -350px;
+            margin-left: 410px;
+        }
+
+        /* Customized button */
+        .button {
+            background-color: black;
+            color: white;
+            font-family: 'sans-serif';
+            padding: 12px 20px;
+            position: absolute;
+            margin-top: -2px;
+            margin-left: 560px;
+            position: fixed;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Custom Password Inputs*/
+        .p12passinput {
+            background-color: black;
+            color: white;
+            border: 0px;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: -270px;
+            margin-left: 457px;
+            display: block;
+            width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .card {
+            background-color: white;
+            color: black;
+            width: 450px;
+            height: 400px;
+            padding: 20px;
+            border-radius: 0.5pc;
+            margin-left: 360px;
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+        }
+    </style>
+
+</body>
+
+</html>
