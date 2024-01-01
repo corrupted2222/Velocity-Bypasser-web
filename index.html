@@ -22,61 +22,10 @@
       color: white; /* Moved the color property here */
       font-family: sans-serif;
     }
-
-    .about {
-      color: white;
-      font-family: sans-serif;
-      margin-left: 40px;
-    }
-
-    .hamburger {
-            display: none; /* Initially hide the hamburger on larger screens */
-            cursor: pointer;
-        }
-
-        @media (max-width: 600px) {
-            .hamburger {
-                display: block; /* Display the hamburger on smaller screens */
-            }
-
-            .menu {
-                display: none; /* Initially hide the menu */
-            }
-
-            .menu a {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: #333;
-            }
-        }
-
   </style>
 </head>
 <body>
-
-
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-  <div class="menu" id="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-  </div>
-  
-  <script>
-      function toggleMenu() {
-          var menu = document.getElementById('menu');
-          menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
-      }
-  </script>
-
-  
-  
-  
-  <h1 class="title">Astra</h1>
+ <h1 class="title">Astra</h1>
 
   <h1 class="about"> THIS WEBSITE IS UNDER MAINTENANCE</h1>
 </body>
