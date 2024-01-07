@@ -1,19 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-adsense-account" content="ca-pub-4602675015712294">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>Astra</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: black;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="700x700" href="images/astra.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Astra">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Astra</title>
+
+    <style>
+        /* Add this style for the 3x2 grid layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Fixed columns without flex */
+            gap: 20px;
+}
+
+        /* Existing styles remain unchanged */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white; /* Set text color for better visibility on a black background */
+        }
+
+    .title {
+      margin-top: 2px;
+      margin-left: 4px;
+      color: white; /* Moved the color property here */
+      font-family: sans-serif;
+    }
+
+        .search {
+            background-color: white;
+            color: black; /* Adjust text color for better visibility on a white background */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .card {
+            background-color: white;
+            flex: none;
+            border-radius: 10px;
+            height: 80px;
+            padding: 10px;
+            text-align: left;
+            position: relative; /* Add position relative for absolute positioning */
+        }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute; /* Position the image absolutely */
+            top: 10px;
+            left: 320px;
+        }
+
+        .card h3 {
+            color: black;
+            margin-bottom: -10px;
+            margin-top: -9px;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        .card a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .card .button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px; 
+        margin: 13px;
+        margin-left: 30px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        font-family: sans-serif;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto; 
+        display: inline-block; 
+    }
+
+    .card .button1 {
+        left: 55px;
+        margin-right: 10px;
+        width: 85px; /* Add a gap between buttons */
+    }
+
+    .card .button2 {
+        right: 10%;
+        display: inline-block; /* Display the button as inline-block */
+        width: 100px; /* Set a specific width for the button */
+    }
+
+        .card .button:hover {
+            background-color: grey;
+        }
+
+        @media (max-width: 600px) {
+            .card-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* Fixed columns without flex */
+            gap: 20px;
+            }
+
+            .container {
+            max-width: 92%;
+            margin: 50px auto;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .card {
+            background-color: white;
+            flex: none;
+            border-radius: 10px;
+            height: 80px;
+            width: auto;
+            padding: 10px;
+            text-align: left;
+            position: relative; /* Add position relative for absolute positioning */
+        }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute; /* Position the image absolutely */
+            top: 10px;
+            left: 300px;
+        }
+
+        .card .button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px; /* Adjust size of buttons here */
+        margin: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        font-family: sans-serif;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto; /* Ensure width is set to auto for responsiveness */
+        display: inline-block; /* Make sure the button is displayed as a block */
+    }
+
+    .card .button1 {
+        left: 50px;
+        margin-right: 10px; /* Add a gap between buttons */
+    }
+
+    .card .button2 {
+        right: 10%;
+        display: inline-block; /* Display the button as inline-block */
+        width: 95px; /* Set a specific width for the button */
     }
 
     .title {
@@ -23,15 +194,108 @@
       font-family: sans-serif;
     }
 
-    .about {
-      color: white;
-      font-family: sans-serif;
-    }
-  </style>
+        }
+    </style>
 </head>
 <body>
- <h1 class="title">Astra</h1>
 
-  <h1 class="about"> THIS WEBSITE IS UNDER MAINTENANCE!</h1>
+    <h1 class="title">Astra | Signer</h1>
+
+
+
+
+    <div class="container">
+        <input class="search" type="text" id="searchInput" placeholder="Search by card title">
+        <div id="cardContainer" class="card-grid"></div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Sample card data
+    const cards = [
+        {
+            title: "App Name",
+            buttonLink1: "https://example.com/button1",
+            buttonLink2: "https://example.com/button2",
+            image: "image1.jpg",
+        },
+        {
+            title: "App Name",
+            buttonLink1: "https://example.com/button3",
+            buttonLink2: "https://example.com/button4",
+            image: "image2.jpg",
+        },
+        {
+            title: "App Name",
+            buttonLink1: "https://example.com/button5",
+            buttonLink2: "https://example.com/button6",
+            image: "image3.jpg",
+        },
+        {
+            title: "App Name",
+            buttonLink1: "https://example.com/button1",
+            buttonLink2: "https://example.com/button2",
+            image: "image1.jpg",
+        },
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const cardContainer = document.getElementById("cardContainer");
+
+    // Function to render cards based on the search input
+    function renderCards(query) {
+        cardContainer.innerHTML = ""; // Clear previous results
+
+        // Filter cards based on the search query
+        const filteredCards = cards.filter(card =>
+            card.title.toLowerCase().includes(query.toLowerCase())
+        );
+
+        // Display the filtered cards in the grid
+        filteredCards.forEach(card => {
+            const cardElement = document.createElement("div");
+            cardElement.classList.add("card");
+
+            // Add title and content
+            cardElement.innerHTML = `
+                <h3>${card.title}</h3>
+            `;
+
+            // Add image if available
+            if (card.image) {
+                const imgElement = document.createElement("img");
+                imgElement.src = card.image;
+                cardElement.appendChild(imgElement);
+            }
+
+            // Add buttons
+            const button1Element = document.createElement("a");
+            button1Element.classList.add("button", "button1");
+            button1Element.textContent = "Ipa Install";
+            button1Element.href = card.buttonLink1;
+            button1Element.target = "_blank"; // Open link in a new tab
+            cardElement.appendChild(button1Element);
+
+            const button2Element = document.createElement("a");
+            button2Element.classList.add("button", "button2");
+            button2Element.textContent = "Direct Install";
+            button2Element.href = card.buttonLink2;
+            button2Element.target = "_blank"; // Open link in a new tab
+            cardElement.appendChild(button2Element);
+
+            cardContainer.appendChild(cardElement);
+        });
+    }
+
+    // Event listener for the search input
+    searchInput.addEventListener("input", function () {
+        renderCards(searchInput.value);
+    });
+
+    // Initial rendering of all cards
+    renderCards("");
+});
+    </script>
+
 </body>
 </html>
