@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8380101823127601"
+     crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-xxxxxxxxxxxxxxxx",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+=======
     <meta name="google-adsense-account" content="ca-pub-8380101823127601">
+>>>>>>> d4952856a7e09e39f0b82a1da9c2362d539281db
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="700x700" href="images/astra.jpg">
@@ -13,32 +26,72 @@
     <title>Astra</title>
 
     <style>
-        /* Add this style for the 3x2 grid layout */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Fixed columns without flex */
-            gap: 20px;
-}
-
-        /* Existing styles remain unchanged */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: black;
-            color: white; /* Set text color for better visibility on a black background */
+            color: white;
         }
 
-    .title {
-      margin-top: 2px;
-      margin-left: 4px;
-      color: white; /* Moved the color property here */
-      font-family: sans-serif;
-    }
+        .title {
+            margin-top: 2px;
+            margin-left: 4px;
+            color: white;
+            font-family: sans-serif;
+        }
 
+        .sign {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            border-radius: 7px;
+            border: none;
+            border-color: black;
+            margin-top: -50px;
+            margin-bottom: 120px;
+            margin-left: 1210px;
+            position: absolute;
+            bottom: 480px;
+            outline: none !important;
+        }
+
+        .sign:hover {
+            background-color: grey;
+        }
+
+        .cert {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            border-radius: 7px;
+            border: none;
+            border-color: black;
+            margin-top: -50px;
+            margin-bottom: 120px;
+            margin-left: 1270px;
+            position: absolute;
+            bottom: 480px;
+            outline: none !important;
+        }
+
+        .cert:hover {
+            background-color: grey;
+        }
+        
         .search {
             background-color: white;
-            color: black; /* Adjust text color for better visibility on a white background */
+            color: black;
             border-radius: 10px;
             margin-bottom: 20px;
             width: 100%;
@@ -48,18 +101,23 @@
 
         .container {
             max-width: 90%;
-            margin: 50px auto;
+            margin: -10px auto;
             text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background-color: white;
-            flex: none;
-            border-radius: 10px;
             height: 80px;
+            border-radius: 10px;
             padding: 10px;
             text-align: left;
-            position: relative; /* Add position relative for absolute positioning */
+            position: relative;
         }
 
         .card img {
@@ -67,7 +125,7 @@
             height: 70px;
             border-radius: 0.5pc;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute; /* Position the image absolutely */
+            position: absolute;
             top: 10px;
             left: 320px;
         }
@@ -88,36 +146,37 @@
         }
 
         .card .button {
-        background-color: black;
-        color: white;
-        padding: 12px 20px; 
-        margin: 13px;
-        margin-left: 30px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-        font-weight: bold;
-        font-family: sans-serif;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto; 
-        display: inline-block; 
-    }
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            margin: 13px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            font-family: sans-serif;
+            position: absolute;
+            bottom: 5px;
+            left: 55%;
+            transform: translateX(-50%);
+            width: auto;
+            display: inline-block;
+        }
 
-    .card .button1 {
-        left: 55px;
-        margin-right: 10px;
-        width: 85px; /* Add a gap between buttons */
-    }
+        .card .button1 {
+            left: 70px;
+            margin-right: 10px;
+            width: 85px;
+            text-align: center;
+        }
 
-    .card .button2 {
-        right: 10%;
-        display: inline-block; /* Display the button as inline-block */
-        width: 100px; /* Set a specific width for the button */
-    }
+        .card .button2 {
+            right: 10%;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
 
         .card .button:hover {
             background-color: grey;
@@ -125,85 +184,110 @@
 
         @media (max-width: 600px) {
             .card-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr); /* Fixed columns without flex */
-            gap: 20px;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
 
             .container {
-            max-width: 92%;
-            margin: 50px auto;
-            text-align: center;
-            margin-left: 10px;
+                max-width: 85%;
+                margin: 50px auto;
+                text-align: center;
+                margin-left: 15px;
+            }
+
+            .card img {
+                left: 250px;
+            }
+
+            .card .button {
+                padding: 10px 15px;
+                font-size: 14px;
+                left: 40%;
+                margin-left: 45px;
+            }
+
+            .card .button1 {
+                width: 55px;
+                left: 10px;
+                margin-right: 10px;
+            }
+
+            .card .button2 {
+                right: 10%;
+                width: 90px;
+            }
+
+            .title {
+                margin-left: 10px;
+            }
         }
 
-        .card {
-            background-color: white;
-            flex: none;
-            border-radius: 10px;
-            height: 80px;
-            width: auto;
-            padding: 10px;
-            text-align: left;
-            position: relative; /* Add position relative for absolute positioning */
-        }
+        @media (max-width: 320px) {
+            .card-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
 
-        .card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0.5pc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute; /* Position the image absolutely */
-            top: 10px;
-            left: 300px;
-        }
+            .container {
+                max-width: 100%;
+                margin: 50px auto;
+                text-align: center;
+                margin-left: 15px;
+            }
 
-        .card .button {
-        background-color: black;
-        color: white;
-        padding: 12px 20px; /* Adjust size of buttons here */
-        margin: 10px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 15px;
-        transition: background-color 0.3s ease;
-        font-weight: bold;
-        font-family: sans-serif;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto; /* Ensure width is set to auto for responsiveness */
-        display: inline-block; /* Make sure the button is displayed as a block */
-    }
+            .card img {
+                left: 250px;
+            }
 
-    .card .button1 {
-        left: 50px;
-        margin-right: 10px; /* Add a gap between buttons */
-    }
+            .card .button {
+                padding: 10px 15px;
+                font-size: 14px;
+                left: 40%;
+                margin-left: 45px;
+                text-align: center;
+            }
 
-    .card .button2 {
-        right: 10%;
-        display: inline-block; /* Display the button as inline-block */
-        width: 95px; /* Set a specific width for the button */
-    }
+            .card .button1 {
+                width: 55px;
+                left: 10px;
+                margin-right: 10px;
+                text-align: center;
+            }
 
-    .title {
-      margin-top: 2px;
-      margin-left: 4px;
-      color: white; /* Moved the color property here */
-      font-family: sans-serif;
-    }
-
-        }
+            .card .button2 {
+                right: 10%;
+                width: 90px;
+            }
+        }            
     </style>
 </head>
 <body>
 
-    <h1 class="title">Astra | Signer</h1>
 
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+    data-ad-slot="xxxxxxxxxx"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
+    <h1 class="title">Astra | Home</h1>
+    
+    <a href="" class="button-link" style="text-decoration: none;">
+        <button class="sign">
+            <img src="images/sign.png" alt="Button Image" width="20" height="20">
+            <br>
+            signer
+        </button>
+    </a>
 
+    <a href="" class="button-link" style="text-decoration: none;">
+        <button class="cert">
+            <img src="images/file.png" alt="Button Image" width="20" height="20">
+            <br>
+            certs
+        </button>
+    </a>
 
     <div class="container">
         <input class="search" type="text" id="searchInput" placeholder="Search by card title">
@@ -216,27 +300,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = [
         {
             title: "App Name",
-            buttonLink1: "https://example.com/button1",
-            buttonLink2: "https://example.com/button2",
-            image: "image1.jpg",
+            buttonLink1: "#",
+            buttonLink2: "#",
+            image: "images/astra.jpg",
         },
         {
             title: "App Name",
-            buttonLink1: "https://example.com/button3",
-            buttonLink2: "https://example.com/button4",
-            image: "image2.jpg",
+            buttonLink1: "#",
+            buttonLink2: "#",
+            image: "images/astra.jpg",
         },
         {
             title: "App Name",
-            buttonLink1: "https://example.com/button5",
-            buttonLink2: "https://example.com/button6",
-            image: "image3.jpg",
+            buttonLink1: "#",
+            buttonLink2: "#",
+            image: "images/astra.jpg",
         },
         {
             title: "App Name",
-            buttonLink1: "https://example.com/button1",
-            buttonLink2: "https://example.com/button2",
-            image: "image1.jpg",
+            buttonLink1: "#",
+            buttonLink2: "#",
+            image: "images/astra.jpg",
         },
     ];
 
@@ -272,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Add buttons
             const button1Element = document.createElement("a");
             button1Element.classList.add("button", "button1");
-            button1Element.textContent = "Ipa Install";
+            button1Element.textContent = "Raw Ipa";
             button1Element.href = card.buttonLink1;
             button1Element.target = "_blank"; // Open link in a new tab
             cardElement.appendChild(button1Element);
