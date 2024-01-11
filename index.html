@@ -147,175 +147,92 @@
         }
 
         .card .button1 {
-            left: 70px;
+            left: 140px;
             margin-right: 10px;
-            width: 85px;
-            text-align: center;
-        }
-
-        .card .button2 {
-            right: 10%;
-            display: inline-block;
-            width: 100px;
+            width: 120px;
             text-align: center;
         }
 
         .card .button:hover {
             background-color: grey;
         }
-
         @media (max-width: 320px) {
-            .card-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-
             .container {
                 max-width: 100%;
-                margin: 50px auto;
+                margin: 1px auto;
                 text-align: center;
-                margin-left: 15px;
-                right: 30px;
+                position: absolute;
+                left: 10px;
             }
-
-            .card img {
-                left: 240px;
-            }
-
-            .card .button {
-                padding: 10px 15px;
-                font-size: 14px;
-                left: 38%;
-                margin-left: 45px;
-                text-align: center;
-            }
-
             .card .button1 {
-                width: 55px;
-                left: 6px;
-                margin-right: 10px;
-                text-align: center;
-            }
-
-            .card .button2 {
-                right: 10%;
-                width: 90px;
-            }
-        }
-        
-        @media (max-width: 375px) {
-            .card-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-
-            .container {
-                max-width: 90%;
-                margin: 50px auto;
-                text-align: center;
-                margin-left: 20px;
-            }
-
-            .card img {
-                left: 255px;
-            }
-
-            .card .button {
-                padding: 10px 15px;
-                font-size: 14px;
-                left: 35%;
-                margin-left: 45px;
-                text-align: center;
-            }
-
-            .card .button1 {
-                width: 55px;
-                left: 6px;
-                margin-right: 10px;
-                text-align: center;
-            }
-
-            .card .button2 {
-                right: 10%;
-                width: 90px;
-            }
-        } 
-
-        @media (max-width: 425px) {
-            .card-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-
-            .container {
-                max-width: 90%;
-                margin: 50px auto;
-                text-align: center;
-                margin-left: 23px;
-            }
-
-            .card img {
-                left: 295px;
-            }
-
-            .card .button {
-                padding: 10px 15px;
-                font-size: 14px;
-                left: 33%;
-                margin-left: 70px;
-                text-align: center;
-            }
-
-            .card .button1 {
-                width: 55px;
-                left: 6px;
-                margin-right: 10px;
-                text-align: center;
-            }
-
-            .card .button2 {
-                right: 10%;
-                width: 90px;
-            }
+            left: 80px;
+            margin-right: 10px;
+            width: 120px;
+            text-align: center;
         }
 
-        @media (max-width: 768px) {
-            .card-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
+        .card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 10px;
+            left: 210px;
+        }
+    }
 
+    @media (max-width: 375px) {
             .container {
-                max-width: 86%;
-                margin: 50px auto;
+                max-width: 100%;
+                margin: 1px auto;
                 text-align: center;
-                margin-left: 50px;
+                position: absolute;
+                left: 35px;
             }
-
-            .title {
-                margin-left: 40px;
-            }
-
-            .card img {
-                left: 240px;
-            }
-
-            .card .button {
-                padding: 10px 15px;
-                font-size: 14px;
-                left: 35%;
-                margin-left: 50px;
-                text-align: center;
-            }
-
             .card .button1 {
-                width: 55px;
-                left: 6px;
-                margin-right: 10px;
-                text-align: center;
-            }
+            left: 80px;
+            margin-right: 10px;
+            width: 120px;
+            text-align: center;
+        }
 
-            .card .button2 {
-                right: 10%;
-                width: 90px;
+        .card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 10px;
+            left: 210px;
+        }
+    }
+
+    @media (max-width: 425px) {
+            .container {
+                max-width: 100%;
+                margin: 1px auto;
+                text-align: center;
+                position: absolute;
+                left: 65px;
             }
-        } 
+            .card .button1 {
+            left: 80px;
+            margin-right: 10px;
+            width: 120px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 0.5pc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 10px;
+            left: 210px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -359,26 +276,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = [
         {
             title: "App Name",
-            buttonLink1: "#",
-            buttonLink2: "#",
+            buttonLink1: "pages/apps/cashapp.html",
             image: "images/astra.jpg",
         },
         {
             title: "App Name",
             buttonLink1: "#",
-            buttonLink2: "#",
             image: "images/astra.jpg",
         },
         {
             title: "App Name",
             buttonLink1: "#",
-            buttonLink2: "#",
             image: "images/astra.jpg",
         },
         {
             title: "App Name",
             buttonLink1: "#",
-            buttonLink2: "#",
             image: "images/astra.jpg",
         },
     ];
@@ -415,17 +328,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Add buttons
             const button1Element = document.createElement("a");
             button1Element.classList.add("button", "button1");
-            button1Element.textContent = "Raw Ipa";
+            button1Element.textContent = "Install";
             button1Element.href = card.buttonLink1;
             button1Element.target = "_blank"; // Open link in a new tab
             cardElement.appendChild(button1Element);
-
-            const button2Element = document.createElement("a");
-            button2Element.classList.add("button", "button2");
-            button2Element.textContent = "Direct Install";
-            button2Element.href = card.buttonLink2;
-            button2Element.target = "_blank"; // Open link in a new tab
-            cardElement.appendChild(button2Element);
 
             cardContainer.appendChild(cardElement);
         });

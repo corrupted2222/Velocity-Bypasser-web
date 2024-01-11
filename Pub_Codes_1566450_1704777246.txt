@@ -1,2 +1,0 @@
-"zone name","placement name","placement id","code (direct link)"
-astra-ipa.com,Popunder_1,21975450,"<script type='text/javascript' src='//pl22075949.toprevenuegate.com/e7/ed/7c/e7ed7c6715568bd898bf12d850593c38.js'></script>"
