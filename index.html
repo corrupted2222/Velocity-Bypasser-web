@@ -14,225 +14,146 @@
     <title>Astra</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.title {
+    margin-top: 2px;
+    margin-left: 4px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.search {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    height: 40px;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+    right: -85%; /* Adjusted position based on percentage */
+    top: -140%; /* Adjusted position based on percentage */
+}
+
+.card h3 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1px;
+    margin-right: -20%; /* Adjusted position based on percentage */
+    margin-left: -15%; /* Adjusted position based on percentage */
+    position: relative;
+    left: 78%;
+    transform: translateX(-50%);
+    top: -60%; /* Adjusted position based on percentage */
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+}
+
+.card button {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 13px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: grey;
+}
+
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+        right: 3%;
+    }
+    
+  
+    .card img {
+        position: relative;
+    right: -80%; /* Adjusted position based on percentage */
+    top: -140%; /* Adjusted position based on percentage */
+    }
         }
 
-        .title {
-            margin-top: 2px;
-            margin-left: 4px;
-            color: white;
-            font-family: sans-serif;
+@media (max-width: 480px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .sign {
-            background-color: white;
-            color: black;
-            transition: background-color 0.3s ease;
-            text-align: center;
-            font-family: sans-serif;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            border-radius: 7px;
-            border: none;
-            border-color: black;
-            position: absolute;
-            bottom: 600px; /* Adjusted */
-            right: 140px; /* Adjusted */
-        }
-
-        .sign:hover {
-            background-color: grey;
-        }
-
-        .cert {
-            background-color: white;
-            color: black;
-            transition: background-color 0.3s ease;
-            text-align: center;
-            font-family: sans-serif;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            border-radius: 7px;
-            border: none;
-            border-color: black;
-            position: absolute;
-            bottom: 600px; /* Adjusted */
-            right: 80px; /* Adjusted */
-        }
-
-        .cert:hover {
-            background-color: grey;
-        }
-        
-        .search {
-            background-color: white;
-            color: black;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 90%;
-            margin: -10px auto;
-            text-align: center;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            height: 80px;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: left;
-            position: relative;
-        }
-
-        .card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0.5pc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 10px;
-            left: 320px;
-        }
-
-        .card h3 {
-            color: black;
-            margin-bottom: -10px;
-            margin-top: -9px;
-        }
-
-        .card p {
-            margin: 10px 0;
-        }
-
-        .card a {
-            display: block;
-            text-decoration: none;
-        }
-
-        .card .button {
-            background-color: black;
-            color: white;
-            padding: 12px 20px;
-            margin: 13px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-            font-weight: bold;
-            font-family: sans-serif;
-            position: absolute;
-            bottom: 5px;
-            left: 55%;
-            transform: translateX(-50%);
-            width: auto;
-            display: inline-block;
-        }
-
-        .card .button1 {
-            left: 140px;
-            margin-right: 10px;
-            width: 120px;
-            text-align: center;
-        }
-
-        .card .button:hover {
-            background-color: grey;
-        }
         @media (max-width: 320px) {
-            .container {
-                max-width: 100%;
-                margin: 1px auto;
-                text-align: center;
-                position: absolute;
-                left: 5px;
-            }
-            .card .button1 {
-            left: 80px;
-            margin-right: 10px;
-            width: 120px;
-            text-align: center;
-        }
-
-        .card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0.5pc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 10px;
-            left: 210px;
-        }
+    .container {
+        position: relative;
+        right: -4%;
     }
-
-    @media (max-width: 375px) {
-            .container {
-                max-width: 100%;
-                margin: 1px auto;
-                text-align: center;
-                position: absolute;
-                left: 25px;
-            }
-            .card .button1 {
-            left: 80px;
-            margin-right: 10px;
-            width: 120px;
-            text-align: center;
         }
 
-        .card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0.5pc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 10px;
-            left: 210px;
-        }
+        @media (max-width: 375px) {
+    .container {
+        position: relative;
+        right: 1%;
     }
-
-    @media (max-width: 425px) {
-            .container {
-                max-width: 100%;
-                margin: 1px auto;
-                text-align: center;
-                position: absolute;
-                left: 65px;
-            }
-            .card .button1 {
-            left: 80px;
-            margin-right: 10px;
-            width: 120px;
-            text-align: center;
         }
 
-        .card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 0.5pc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 10px;
-            left: 210px;
-        }
+        @media (max-width: 425px) {
+    .container {
+        position: relative;
+        right: -2%;
     }
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -247,23 +168,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-    <h1 class="title">Astra | Home</h1>
-    
-    <a href="" class="button-link" style="text-decoration: none;">
-        <button class="sign">
-            <img src="images/sign.png" alt="Button Image" width="20" height="20">
-            <br>
-            signer
-        </button>
-    </a>
-
-    <a href="" class="button-link" style="text-decoration: none;">
-        <button class="cert">
-            <img src="images/file.png" alt="Button Image" width="20" height="20">
-            <br>
-            certs
-        </button>
-    </a>
+    <h1 class="title">Astra | Scripts</h1>
 
     <div class="container">
         <input class="search" type="text" id="searchInput" placeholder="Search by card title">
@@ -271,81 +176,65 @@
     </div>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Sample card data
-    const cards = [
-        {
-            title: "App Name",
-            buttonLink1: "pages/apps/cashapp.html",
-            image: "images/astra.jpg",
-        },
-        {
-            title: "App Name",
-            buttonLink1: "#",
-            image: "images/astra.jpg",
-        },
-        {
-            title: "App Name",
-            buttonLink1: "#",
-            image: "images/astra.jpg",
-        },
-        {
-            title: "App Name",
-            buttonLink1: "#",
-            image: "images/astra.jpg",
-        },
-    ];
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sample card data
+            const cards = [
+                // ... (unchanged)
 
-    const searchInput = document.getElementById("searchInput");
-    const cardContainer = document.getElementById("cardContainer");
+                {
+                    title: "OP Jailbreak Autofarm",
+                    image: "images/image/astra.png",
+                    link: "https://jailbreak.com/ps99",
+                },
+                {
+                    title: "OP Jailbreak Autofarm",
+                    image: "images/app-icons/scarlet.jpeg",
+                    link: "https://jailbreak.com/ps99",
+                },
+                {
+                    title: "OP Jailbreak Autofarm",
+                    image: "card-image/jailbreak.png",
+                    link: "https://jailbreak.com/ps99",
+                },
+            ];
 
-    // Function to render cards based on the search input
-    function renderCards(query) {
-        cardContainer.innerHTML = ""; // Clear previous results
+            const searchInput = document.getElementById("searchInput");
+            const cardContainer = document.getElementById("cardContainer");
 
-        // Filter cards based on the search query
-        const filteredCards = cards.filter(card =>
-            card.title.toLowerCase().includes(query.toLowerCase())
-        );
+            function renderCards(query) {
+                cardContainer.innerHTML = "";
 
-        // Display the filtered cards in the grid
-        filteredCards.forEach(card => {
-            const cardElement = document.createElement("div");
-            cardElement.classList.add("card");
+                const filteredCards = cards.filter(card =>
+                    card.title.toLowerCase().includes(query.toLowerCase())
+                );
 
-            // Add title and content
-            cardElement.innerHTML = `
-                <h3>${card.title}</h3>
-            `;
+                filteredCards.forEach(card => {
+                    const cardElement = document.createElement("div");
+                    cardElement.classList.add("card");
 
-            // Add image if available
-            if (card.image) {
-                const imgElement = document.createElement("img");
-                imgElement.src = card.image;
-                cardElement.appendChild(imgElement);
+                    cardElement.innerHTML = `
+                        <h3>${card.title}</h3>
+                        <button onclick="window.location.href='${card.link}'">Download</button>
+                    `;
+
+                    if (card.image) {
+                        const imgElement = document.createElement("img");
+                        imgElement.src = card.image;
+                        cardElement.appendChild(imgElement);
+                    }
+
+                    cardContainer.appendChild(cardElement);
+                });
             }
 
-            // Add buttons
-            const button1Element = document.createElement("a");
-            button1Element.classList.add("button", "button1");
-            button1Element.textContent = "Install";
-            button1Element.href = card.buttonLink1;
-            button1Element.target = "_blank"; // Open link in a new tab
-            cardElement.appendChild(button1Element);
+            searchInput.addEventListener("input", function () {
+                renderCards(searchInput.value);
+            });
 
-            cardContainer.appendChild(cardElement);
+            renderCards("");
         });
-    }
-
-    // Event listener for the search input
-    searchInput.addEventListener("input", function () {
-        renderCards(searchInput.value);
-    });
-
-    // Initial rendering of all cards
-    renderCards("");
-});
     </script>
+
 
 </body>
 </html>
