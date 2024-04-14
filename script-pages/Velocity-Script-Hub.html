@@ -33,12 +33,12 @@
             background-color: rgb(40,40,40);
             color: white;
             align-items: center;
-            width: 500px;
-            height: 100px;
+            width: 37%;
+            height: 50px;
             border-radius: 10px;
             padding: 20px;
             margin: auto;
-            margin-top: 70px;
+            margin-top: 50px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
@@ -55,13 +55,57 @@
         }
 
         .scriptimg {
-            width: 500px;
-            height: 300px;
+            width: 40%;
             border-radius: 10px;
             margin: auto;
             display: block;
             position: relative;
             top: 40px;
+        }
+
+        .button-container {
+            display: flex;
+            margin-top: 10px;
+            margin: 15px;
+            justify-content: center;
+        }
+
+        .copy,
+        .game,
+        .download {
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFFF00;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            position: relative;
+            top: -10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy:hover,
+        .game:hover,
+        .download:hover {
+            background-color: #b3b300;
+        }
+
+        .back {
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFFF00;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            bottom: 530px;
+            left: 5px;
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
@@ -73,5 +117,28 @@
         </h1>
     </div>
 
-    </body>
-    </html>
+    <div class="button-container">
+        <button class="copy">copy</button>
+        <button class="game">game</button>
+        <button class="download">download</button>
+    </div>
+
+    <button class="back">back</button>
+
+    <script>
+        document.querySelector('.copy').addEventListener('click', function() {
+            var textToCopy = document.querySelector('.text').innerText;
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                alert('copied!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        });
+
+        document.querySelector('.back').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+
+</body>
+</html>
