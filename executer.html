@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- APPLE APP -->
+
+    <link rel="apple-touch-icon" sizes="700x700" href="images/astra.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- TITLE -->
+
+    <meta name="apple-mobile-web-app-title" content="Velocity Bypasser">
+    <link rel="icon" href="Velocity.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="Velocity.ico" type="image/x-icon">
+    <title>Velocity Bypasser</title>
+
+    <!-- EMBED -->
+
+    <meta property="og:title" content="Velocity Bypasser">
+    <meta property="og:description" content="A website made for the best scripts on roblox.">
+    <meta property="og:image" content="https://www.velocitybypasser.xyz/Velocity.png">
+    <meta property="og:url" content="https://further.lol">
+    <style> 
+    body {
+        background-color: black;
+    }
+
+    .particle{
+        -webkit-background-size: cover;
+        background-size: 600px;
+        background-position: center center;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      bottom: 600px;
+    }
+    .card {
+      background-color: white;
+      font-family: sans-serif;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      padding: 20px;
+      width: calc(33.33% - 30px);
+      max-width: 300px;
+      height: 130px;
+      transition: height 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      height: 200px;
+    }
+    .cardtitle {
+        text-align: center;
+        font-size: 23px;
+        position: relative;
+        bottom: 140px;
+    }
+    .icon {
+        display: block;
+        margin: 0 auto; /* Center the image */
+        width: 100px; /* Set width */
+        position: relative;
+        top: 20px;
+    }
+    .card p {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .card:hover p {
+        display: block;
+    }
+
+    .download {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card:hover .download {
+        display: block;
+    }
+
+    .download:hover {
+        background-color: white;
+        color: black;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 30px);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .card {
+        width: calc(100% - 30px);
+      }
+    }
+    </style>
+    
+    <body>
+        <div class="particle">
+            <div id="particles-js"></div>
+        </div>
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
+
+
+        <div class="container">
+            <div class="card">
+                <img src="images/arceusx.png" class="icon">
+              <h2 class="cardtitle">Arceus X</h2>
+              <button class="download">Download</button>
+            </div>
+            <div class="card">
+              <img src="images/codex.png" class="icon">
+              <h2 class="cardtitle">Codex</h2>
+              <button class="download">Download</button>
+            </div>
+            <div class="card">
+              <img src="images/delta.png" class="icon">
+              <h2 class="cardtitle">Delta</h2>
+              <button class="download">Download</button>
+            </div>
+            <!-- Add more cards here -->
+          </div>
+
+
+    </body>
