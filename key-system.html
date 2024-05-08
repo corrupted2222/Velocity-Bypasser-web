@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #generatedKey {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Key Generator</h1>
+        <button id="generateBtn">Generate Key</button>
+        <p id="generatedKey"></p>
+    </div>
+
+    <script>
+ const express = require("express");
+const app = express();
+const port = 3000; // You can use any port number you prefer
+
+// Endpoint to generate a new key
+app.post("/generate-key", (req, res) => {
+    // Here, you would generate a new key and save it to your database or storage
+    const generatedKey = "YOUR_GENERATED_KEY";
+
+    // For demonstration purposes, we're just sending back the generated key as a response
+    res.json({ key: generatedKey });
+});
+
+// Serve static files from the current directory
+app.use(express.static(__dirname));
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
+    </script>
+</body>
+</html>
